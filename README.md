@@ -1,11 +1,11 @@
-## Elma test task.
+# Elma test task.
 
-# install the repo with npm
+## install the repo with npm
 npm install
 
-# install dependencies
+## install dependencies
 npm install webpack-dev-server webpack typescript -g
 
-#dev
+## dev
 npm start
 http://localhost:8080
