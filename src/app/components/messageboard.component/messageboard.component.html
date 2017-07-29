@@ -1,0 +1,10 @@
+<div class="el-messageboard__history">
+  <div class="el-messageboard__message-container">
+    <el-message
+      *ngFor="let message of messages"
+      [item]="message"
+    >
+    </el-message>
+  </div>
+</div>
+<el-messagebar (send)="onSend($event)"></el-messagebar>

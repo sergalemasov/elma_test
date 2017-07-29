@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.el-userlist-item {
+  &:host {
+    font-size: 1.5em;
+  }
+
+  &__content {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  &__avatar {
+    width: $list-item-avatar-width;
+    height: auto;
+    // for list view and detail view
+    //margin-right: 30px;
+    // for message view
+    margin-right: 0px;
+  }
+
+  &__avatar,
+  &__firstname,
+  &__surname, {
+    display: inline-block;
+  }
+
+  &__firstname,
+  &__surname {
+    // for list view and detail view
+    // display: block;
+    // for message view
+    display: none;
+  }
+}

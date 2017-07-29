@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.el-userlist {
+  &:host {
+    display: block;
+    width: $content-width;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    transition: width 0.3s ease;
+    height: 100%;
+    // for list view
+    // width: $content-width;
+    // for detail view
+    // width: $detail-width;
+    // for message view width has to be got from variable
+    width: $message-user-list-width;
+  }
+}

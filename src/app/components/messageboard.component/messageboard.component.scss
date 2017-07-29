@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.el-messageboard {
+  &:host {
+    display: block;
+    height: 100%;
+    padding-left: $message-user-list-width;
+  }
+
+  &__history {
+    display: block;
+    height: 100%;
+    padding: $messageboard-padding;
+    padding-bottom: $messageboard-padding + $messagebar-height;
+    background: yellow;
+    position: relative;
+  }
+
+  &__message-container {
+    position: absolute;
+    bottom: $messageboard-padding + $messagebar-height;
+    right: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="el-userlist__container">
+  <el-userlist-item
+    *ngFor="let userlistItem of $userlist | async"
+    [item]="userlistItem"
+  ></el-userlist-item>
+</div>

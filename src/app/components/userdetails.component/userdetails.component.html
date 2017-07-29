@@ -1,0 +1,8 @@
+<ng-container *ngIf="details">
+  <img class="el-userdetails__avatar" [src]="details.avatar">
+  <div class="el-userdetails__fullname">{{details.firstname}} {{details.surname}}</div>
+  <div class="el-userdetails__age">Age: {{details.age}}</div>
+  <div class="el-userdetails__city">City: {{details.city}}</div>
+  <div class="el-userdetails__about">{{details.about}}</div>
+  <button class="el-userdetails__start-messaging btn btn-primary">Start messaging</button>
+</ng-container>

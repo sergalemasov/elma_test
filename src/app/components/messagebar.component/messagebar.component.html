@@ -1,0 +1,7 @@
+<input
+  class="el-messagebar__input form-control"
+  type="text"
+  (keyup.enter)="onSend()"
+  [(ngModel)]="messageInput"
+>
+<button class="el-messagebar__send btn btn-primary" (click)="onSend()">Send</button>

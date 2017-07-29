@@ -1,0 +1,47 @@
+@import '../../../styles/variables.scss';
+
+.el-userdetails {
+  $img-size: 200px;
+  $img-margin: 20px;
+  $content-vertical-padding: 50px;
+
+  &:host {
+    padding: $content-vertical-padding 10px;
+    display: block;
+    position: fixed;
+    margin-left: $detail-width;
+    width: $detail-width;
+    height: 100%;
+  }
+
+  &__avatar {
+    margin: $img-margin;
+    height: $img-size;
+    width: $img-size;
+    float: left;
+  }
+
+  &__fullname {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 10px;
+    margin-left: $img-margin * 2 + $img-size + 10px;
+  }
+  &__age,
+  &__city {
+    margin: 10px;
+    margin-left: $img-margin * 2 + $img-size + 10px;
+  }
+
+  &__about {
+    margin: 10px;
+    clear: both;
+  }
+
+  &__start-messaging {
+    display: block;
+    height: 50px;
+    width: 200px;
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+.el-messagebar {
+  $send-width: 150px;
+
+  &:host {
+    display: block;
+    transform: translateY(-100%);
+    height: $messagebar-height;
+  }
+
+  &__input {
+    margin-left: $messageboard-padding;
+    float: left;
+    width: 72%;
+    margin-right: 0;
+    width: $messageboard-width - ($messageboard-padding * 3 + $send-width);
+  }
+
+  &__send {
+    margin: 0 $messageboard-padding;
+    width: $send-width;
+  }
+}

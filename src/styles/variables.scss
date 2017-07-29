@@ -1,0 +1,9 @@
+$content-width: 900px;
+$detail-width: $content-width / 2;
+$list-item-avatar-width: 50px;
+$list-item-padding: 16px;
+$message-user-list-width: $list-item-padding * 2 + $list-item-avatar-width;
+$messageboard-width: $content-width - $message-user-list-width;
+$messagebar-input-height: 32px;
+$messageboard-padding: 10px;
+$messagebar-height: $messageboard-padding + $messagebar-input-height;
