@@ -6,6 +6,8 @@ npm install
 ## install dependencies
 npm install webpack-dev-server webpack typescript -g
 
-## dev
+## dev script
 npm start
+
+## server
 http://localhost:8080
