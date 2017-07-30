@@ -1,10 +1,15 @@
 @import '../../../styles/variables';
+@import '../../../styles/colors';
 
 .el-message {
-  $message-color: lightyellow;
+  $message-color: $cyan200;
   $message-height: 50px;
   $tongue-width: 15px;
   $message-width: $messageboard-width / 2 - $tongue-width;
+
+  &--loaded {
+    opacity: 1;
+  }
 
   &:host {
     margin: 10px 0;
@@ -38,3 +43,5 @@
     word-break: break-word;
   }
 }
+
+

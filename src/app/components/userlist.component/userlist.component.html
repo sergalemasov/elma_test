@@ -1,6 +1,12 @@
-<div class="el-userlist__container">
+<div
+  class="el-userlist__container"
+  [@userListState]="userListState"
+  (@userListState.done)="onStateChangeEnd($event)"
+>
   <el-userlist-item
     *ngFor="let userlistItem of $userlist | async"
     [item]="userlistItem"
+    (select)="onUserSelect($event)"
+    [isNameVisible]="isNameVisible"
   ></el-userlist-item>
 </div>

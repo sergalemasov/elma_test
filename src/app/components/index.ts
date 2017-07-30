@@ -5,3 +5,5 @@ export * from './userdetails.component';
 export * from './message.component';
 export * from './messagebar.component';
 export * from './messageboard.component';
+export * from './userdetails-spinner.component';
+export * from './nocontent.component';

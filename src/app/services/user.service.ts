@@ -3,11 +3,7 @@ import { Observable, Observer } from 'rxjs';
 import { FakeHttpService } from './fakehttp.service';
 import { ImgService } from './img.service';
 
-import {
-  IUserlistItem,
-  IRawUserlistItem,
-  IUserDetails
-} from '../entities';
+import { IUserlistItem, IRawUserlistItem, IUserDetails } from '../entities';
 
 @Injectable()
 export class UserService {
@@ -36,11 +32,11 @@ export class UserService {
         this.logHttpError(err);
         const emptyUserDetails: IUserDetails = {
           _id: '',
-          avatar: '',
-          firstname: '',
-          surname: '',
+          avatar: this.placeholder,
+          firstname: 'Unknown',
+          surname: 'user',
           about: '',
-          age: 0,
+          age: undefined,
           city: ''
         };
         return Observable.of(emptyUserDetails);

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ROUTES } from './app.routes';
 
@@ -12,7 +13,9 @@ import {
   UserDetailsComponent,
   MessagebarComponent,
   MessageboardComponent,
-  MessageComponent
+  MessageComponent,
+  UserDetailsSpinnerComponent,
+  NoContentComponent
 } from './components';
 
 import {
@@ -20,14 +23,17 @@ import {
   FakeHttpService,
   ImgService,
   MessageService,
-  StorageService
+  StorageService,
+  ViewStateService,
+  SelectedUseridService
 } from './services';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
@@ -36,14 +42,18 @@ import {
     UserDetailsComponent,
     MessagebarComponent,
     MessageboardComponent,
-    MessageComponent
+    MessageComponent,
+    UserDetailsSpinnerComponent,
+    NoContentComponent
   ],
   providers: [
     UserService,
     FakeHttpService,
     ImgService,
     MessageService,
-    StorageService
+    StorageService,
+    ViewStateService,
+    SelectedUseridService
   ],
   bootstrap: [
     AppComponent

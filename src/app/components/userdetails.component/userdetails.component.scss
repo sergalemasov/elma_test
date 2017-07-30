@@ -8,7 +8,7 @@
   &:host {
     padding: $content-vertical-padding 10px;
     display: block;
-    position: fixed;
+    position: relative;
     margin-left: $detail-width;
     width: $detail-width;
     height: 100%;

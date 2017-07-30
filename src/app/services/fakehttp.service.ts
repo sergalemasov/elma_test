@@ -49,11 +49,9 @@ export class FakeHttpService {
       case /\/users$/.test(url):
         response = this.getRawUserList();
         break;
-
       case /\/users\/([a-f0-9]+)$/.test(url):
         response = this.getRawUserById(RegExp.$1);
         break;
-
       case /\/messages\/([a-f0-9]+)$/.test(url):
         if (body) {
           response = this.addMessageToStorage(RegExp.$1, body);
@@ -61,7 +59,6 @@ export class FakeHttpService {
           response = this.getMessageList(RegExp.$1);
         }
         break;
-
       default:
         response = null;
     }

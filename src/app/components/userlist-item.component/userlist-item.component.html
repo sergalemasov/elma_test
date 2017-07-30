@@ -1,7 +1,17 @@
-<a class="list-group-item" routerLink="/messageboard/{{item._id}}">
+<a class="list-group-item" (click)="onUserClick(item._id)" [class.active]="isActive()">
   <div class="el-userlist-item__content">
-    <img class="el-userlist-item__avatar" src={{item.avatar}}>
-    <div class="el-userlist-item__firstname">{{item.firstname}}</div>
-    <div class="el-userlist-item__surname">{{item.surname}}</div>
+    <img
+      class="el-userlist-item__avatar"
+      [class.el-userlist-item__avatar--message-view]="!isNameVisible"
+      src={{item.avatar}}
+    >
+    <div
+      class="el-userlist-item__firstname"
+      [class.el-userlist-item__firstname--message-view]="!isNameVisible"
+    >{{item.firstname}}</div>
+    <div
+      class="el-userlist-item__surname"
+      [class.el-userlist-item__surname--message-view]="!isNameVisible"
+    >{{item.surname}}</div>
   </div>
 </a>

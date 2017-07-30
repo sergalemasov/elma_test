@@ -10,10 +10,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MessagebarComponent {
   @Output() public send: EventEmitter<string> = new EventEmitter<string>();
-  public messageInput: string;
 
-  constructor() {
-  }
+  public messageInput: string;
 
   public onSend(): void {
     if (this.messageInput) {

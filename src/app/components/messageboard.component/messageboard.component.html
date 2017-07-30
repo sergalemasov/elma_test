@@ -1,10 +1,16 @@
-<div class="el-messageboard__history">
-  <div class="el-messageboard__message-container">
+<div
+  class="el-messageboard__history"
+  [@messageBoardOpacity]="boardVisualState"
+  (@messageBoardOpacity.done)="onStateChangeEnd($event)"
+>
+  <div class="el-messageboard__message-container" *ngIf="messages" [@messageHistoryOpacity]="boardVisualState">
     <el-message
       *ngFor="let message of messages"
       [item]="message"
     >
     </el-message>
   </div>
+  <div class="el-messageboard__feel-free" *ngIf="noMessages">Feel free to start a new chat!</div>
 </div>
-<el-messagebar (send)="onSend($event)"></el-messagebar>
+<img class="el-messageboard__details" [src]="detailsImg" (click)="onDetailsClick()">
+<el-messagebar (send)="onSend($event)" [@messageBarTranslate]="barVisualState"></el-messagebar>

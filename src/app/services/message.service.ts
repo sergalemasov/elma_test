@@ -2,11 +2,7 @@ import { Injectable } from '@angular/core';
 import { FakeHttpService } from './fakehttp.service';
 import { Observable } from 'rxjs';
 
-import {
-  IRawMessage,
-  IMessage
-} from '../entities';
-
+import { IRawMessage, IMessage } from '../entities';
 
 @Injectable()
 export class MessageService {

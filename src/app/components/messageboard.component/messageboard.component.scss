@@ -1,10 +1,12 @@
 @import '../../../styles/variables';
+@import '../../../styles/colors';
 
 .el-messageboard {
   &:host {
     display: block;
     height: 100%;
     padding-left: $message-user-list-width;
+    position: relative;
   }
 
   &__history {
@@ -12,7 +14,7 @@
     height: 100%;
     padding: $messageboard-padding;
     padding-bottom: $messageboard-padding + $messagebar-height;
-    background: yellow;
+    background: $cyan50;
     position: relative;
   }
 
@@ -21,5 +23,29 @@
     bottom: $messageboard-padding + $messagebar-height;
     right: 0;
     left: 0;
+  }
+
+  &__details {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+    background-color: $cyan900;
+    transition: background-color 0.1s ease-out;
+
+    &:hover {
+      background-color: $cyan700;
+    }
+  }
+
+  &__feel-free {
+    position: absolute;
+    bottom: $messageboard-padding + $messagebar-height;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

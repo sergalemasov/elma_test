@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
+import { messageAnimations } from './message.animations';
 
 @Component({
   selector: 'el-message',
@@ -6,17 +7,21 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./message.component.scss'],
   host: {
     class: 'el-message'
-  }
+  },
+  animations: messageAnimations
 })
 export class MessageComponent {
   @Input() public item: any;
+  @HostBinding('@flyMessage') state: string;
+  @HostBinding('class.el-message--loaded') loaded: boolean;
 
-  constructor() {
-  }
+  constructor() {}
 
   public ngOnInit(): void {
-  }
-
-  public ngOnDestroy() {
+    if (this.item.status === 0) {
+      this.state = 'visible';
+    } else {
+      this.loaded = true;
+    }
   }
 };
